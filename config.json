@@ -1,0 +1,77 @@
+{
+  "_설명": "보여줄 종목·피드·지표를 여기서 바꿀 수 있습니다. 심볼은 Yahoo Finance 표기를 씁니다.",
+  "indices": [
+    {"name": "다우존스", "symbol": "^DJI", "fred": "DJIA"},
+    {"name": "S&P 500", "symbol": "^GSPC", "fred": "SP500"},
+    {"name": "나스닥 종합", "symbol": "^IXIC", "fred": "NASDAQCOM"},
+    {"name": "러셀 2000", "symbol": "^RUT"}
+  ],
+  "sectors": [
+    {"name": "기술", "symbol": "XLK"},
+    {"name": "커뮤니케이션", "symbol": "XLC"},
+    {"name": "임의소비재", "symbol": "XLY"},
+    {"name": "금융", "symbol": "XLF"},
+    {"name": "헬스케어", "symbol": "XLV"},
+    {"name": "산업재", "symbol": "XLI"},
+    {"name": "필수소비재", "symbol": "XLP"},
+    {"name": "에너지", "symbol": "XLE"},
+    {"name": "소재", "symbol": "XLB"},
+    {"name": "유틸리티", "symbol": "XLU"},
+    {"name": "부동산", "symbol": "XLRE"}
+  ],
+  "stocks": [
+    {"name": "엔비디아", "symbol": "NVDA", "aliases": ["Nvidia"]},
+    {"name": "애플", "symbol": "AAPL", "aliases": ["Apple", "iPhone"]},
+    {"name": "마이크로소프트", "symbol": "MSFT", "aliases": ["Microsoft"]},
+    {"name": "알파벳", "symbol": "GOOGL", "aliases": ["Alphabet", "Google"]},
+    {"name": "아마존", "symbol": "AMZN", "aliases": ["Amazon"]},
+    {"name": "메타", "symbol": "META", "aliases": ["Meta", "Facebook"]},
+    {"name": "브로드컴", "symbol": "AVGO", "aliases": ["Broadcom"]},
+    {"name": "테슬라", "symbol": "TSLA", "aliases": ["Tesla", "Musk"]}
+  ],
+  "macro": [
+    {"name": "WTI 유가", "symbol": "CL=F", "unit": "$", "digits": 2},
+    {"name": "금", "symbol": "GC=F", "unit": "$", "digits": 1},
+    {"name": "달러/원", "symbol": "KRW=X", "unit": "원", "digits": 1},
+    {"name": "달러 인덱스", "symbol": "DX-Y.NYB", "unit": "", "digits": 2},
+    {"name": "VIX 변동성", "symbol": "^VIX", "unit": "", "digits": 2, "fred": "VIXCLS"},
+    {"name": "비트코인", "symbol": "BTC-USD", "unit": "$", "digits": 0}
+  ],
+  "performance": ["^GSPC", "^IXIC", "^DJI", "^RUT", "NVDA", "AAPL", "MSFT", "GOOGL", "AMZN", "META", "AVGO", "TSLA", "GC=F", "BTC-USD"],
+  "risk": {"high_yield_fred": "BAMLH0A0HYM2"},
+  "yields": [
+    {"name": "2년물", "fred": "DGS2"},
+    {"name": "10년물", "fred": "DGS10"},
+    {"name": "30년물", "fred": "DGS30"}
+  ],
+  "news_feeds": [
+    {"source": "CNBC", "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html"},
+    {"source": "CNBC 투자", "url": "https://www.cnbc.com/id/15839069/device/rss/rss.html"},
+    {"source": "MarketWatch", "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories"},
+    {"source": "WSJ 마켓", "url": "https://feeds.content.dowjones.io/public/rss/RSSMarketsMain"}
+  ],
+  "news_limit": 12,
+  "news_hours": 30,
+  "fed_feeds": [
+    {"group": "통화정책 발표", "url": "https://www.federalreserve.gov/feeds/press_monetary.xml"},
+    {"group": "연설·증언", "url": "https://www.federalreserve.gov/feeds/speeches_and_testimony.xml"}
+  ],
+  "calendar_days": 7,
+  "calendar_releases": [
+    {"match": "FOMC Press Release", "name": "FOMC 금리 결정", "star": 3},
+    {"match": "Employment Situation", "name": "고용보고서(비농업 고용·실업률)", "star": 3},
+    {"match": "Consumer Price Index", "name": "소비자물가지수(CPI)", "star": 3},
+    {"match": "Personal Income and Outlays", "name": "개인소득·지출(PCE 물가)", "star": 3},
+    {"match": "Gross Domestic Product", "name": "GDP", "star": 3},
+    {"match": "Producer Price Index", "name": "생산자물가지수(PPI)", "star": 2},
+    {"match": "Advance Monthly Sales for Retail", "name": "소매판매", "star": 2},
+    {"match": "Job Openings and Labor Turnover", "name": "구인·이직 보고서(JOLTS)", "star": 2},
+    {"match": "Unemployment Insurance Weekly Claims", "name": "신규 실업수당 청구", "star": 1},
+    {"match": "Industrial Production and Capacity", "name": "산업생산", "star": 1},
+    {"match": "New Residential Construction", "name": "주택착공", "star": 1},
+    {"match": "Surveys of Consumers", "name": "미시간대 소비자심리", "star": 1}
+  ],
+  "manual_events": [
+    {"_예시": "직접 추가할 일정은 아래 형식으로 넣으세요. date는 미국 날짜입니다.", "date": "", "name": ""}
+  ]
+}

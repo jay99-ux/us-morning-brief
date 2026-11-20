@@ -1,0 +1,6 @@
+# 빌드할 때마다 새로 만들어지는 파일
+docs/*.html
+docs/data.json
+docs/archive/
+build/
+__pycache__/
